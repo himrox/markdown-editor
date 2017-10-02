@@ -11,10 +11,14 @@
 
   <body>
     <%= render 'layouts/header' %>
-    
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-    <%= yield %>
+    <div class="pure-g">
+      <div class="pure-u-1-5"></div>
+      <div class="pure-u-3-5">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
