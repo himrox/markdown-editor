@@ -24,6 +24,7 @@
   </div>
 </div>
 
+<script src="https://cdn.rawgit.com/chjj/marked/master/marked.min.js"></script>
 <script type="text/javascript">
   var preview = function() {
     var title = document.getElementById("article_title");
@@ -32,7 +33,7 @@
     var contentPreview = document.getElementById("content-preview");
 
     titlePreview.innerHTML = title.value;
-    contentPreview.innerHTML = content.value;
+    contentPreview.innerHTML = marked(content.value);
   };
 
   var previewBtn = document.getElementById("preview-btn");

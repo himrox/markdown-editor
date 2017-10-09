@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 <div class="content">
   <%= markdown @article.content %>
+  <%= link_to("edit", edit_article_path(@article)) %>
+  <%= link_to("delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }) %>
 </div>
-<%= link_to("edit", edit_article_path(@article)) %>
-<%= link_to("delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }) %>
