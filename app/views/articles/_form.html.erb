@@ -14,3 +14,27 @@
 
   <%= f.submit "Post", class: "pure-button pure-button-primary" %>
 <% end %>
+
+<button class="pure-button" id="preview-btn">Preview</button>
+
+<div id="preview">
+  <div id="title-preview">
+  </div>
+  <div id="content-preview">
+  </div>
+</div>
+
+<script type="text/javascript">
+  var preview = function() {
+    var title = document.getElementById("article_title");
+    var content = document.getElementById("article_content");
+    var titlePreview = document.getElementById("title-preview");
+    var contentPreview = document.getElementById("content-preview");
+
+    titlePreview.innerHTML = title.value;
+    contentPreview.innerHTML = content.value;
+  };
+
+  var previewBtn = document.getElementById("preview-btn");
+  previewBtn.addEventListener("click", preview);
+</script>
